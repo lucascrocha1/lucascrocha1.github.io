@@ -1,13 +1,14 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-    tag: 'home-page'
+    tag: 'contact-page'
 })
-export class HomePage {
+export class ContactPage {
     render() {
         return (
             <div>
-                <menu-component></menu-component>
+                <menu-component></menu-component>,
+                <span>teste</span>
             </div>
         )
     }

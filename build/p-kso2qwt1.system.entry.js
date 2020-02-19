@@ -1,0 +1,1 @@
+System.register(["./p-8d3a090a.system.js"],(function(t){"use strict";var n,e;return{setters:[function(t){n=t.r;e=t.h}],execute:function(){var r=t("contact_page",function(){function t(t){n(this,t)}t.prototype.render=function(){return e("div",null,e("menu-component",null),",",e("span",null,"teste"))};return t}())}}}));

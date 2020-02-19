@@ -1,0 +1,1 @@
+import{r as n,h as t}from"./p-a8bb2bce.js";const e=class{constructor(t){n(this,t)}render(){return t("div",null,t("menu-component",null),",",t("span",null,"teste"))}};export{e as contact_page};

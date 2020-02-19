@@ -11,7 +11,13 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AppRoot {}
+  interface ContactPage {}
   interface HomePage {}
+  interface MenuComponent {}
+  interface MenuDesktop {
+    'menu': { title: string }[];
+  }
+  interface MenuMobile {}
 }
 
 declare global {
@@ -23,24 +29,62 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLContactPageElement extends Components.ContactPage, HTMLStencilElement {}
+  var HTMLContactPageElement: {
+    prototype: HTMLContactPageElement;
+    new (): HTMLContactPageElement;
+  };
+
   interface HTMLHomePageElement extends Components.HomePage, HTMLStencilElement {}
   var HTMLHomePageElement: {
     prototype: HTMLHomePageElement;
     new (): HTMLHomePageElement;
   };
+
+  interface HTMLMenuComponentElement extends Components.MenuComponent, HTMLStencilElement {}
+  var HTMLMenuComponentElement: {
+    prototype: HTMLMenuComponentElement;
+    new (): HTMLMenuComponentElement;
+  };
+
+  interface HTMLMenuDesktopElement extends Components.MenuDesktop, HTMLStencilElement {}
+  var HTMLMenuDesktopElement: {
+    prototype: HTMLMenuDesktopElement;
+    new (): HTMLMenuDesktopElement;
+  };
+
+  interface HTMLMenuMobileElement extends Components.MenuMobile, HTMLStencilElement {}
+  var HTMLMenuMobileElement: {
+    prototype: HTMLMenuMobileElement;
+    new (): HTMLMenuMobileElement;
+  };
   interface HTMLElementTagNameMap {
     'app-root': HTMLAppRootElement;
+    'contact-page': HTMLContactPageElement;
     'home-page': HTMLHomePageElement;
+    'menu-component': HTMLMenuComponentElement;
+    'menu-desktop': HTMLMenuDesktopElement;
+    'menu-mobile': HTMLMenuMobileElement;
   }
 }
 
 declare namespace LocalJSX {
   interface AppRoot {}
+  interface ContactPage {}
   interface HomePage {}
+  interface MenuComponent {}
+  interface MenuDesktop {
+    'menu'?: { title: string }[];
+  }
+  interface MenuMobile {}
 
   interface IntrinsicElements {
     'app-root': AppRoot;
+    'contact-page': ContactPage;
     'home-page': HomePage;
+    'menu-component': MenuComponent;
+    'menu-desktop': MenuDesktop;
+    'menu-mobile': MenuMobile;
   }
 }
 
@@ -51,7 +95,11 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+      'contact-page': LocalJSX.ContactPage & JSXBase.HTMLAttributes<HTMLContactPageElement>;
       'home-page': LocalJSX.HomePage & JSXBase.HTMLAttributes<HTMLHomePageElement>;
+      'menu-component': LocalJSX.MenuComponent & JSXBase.HTMLAttributes<HTMLMenuComponentElement>;
+      'menu-desktop': LocalJSX.MenuDesktop & JSXBase.HTMLAttributes<HTMLMenuDesktopElement>;
+      'menu-mobile': LocalJSX.MenuMobile & JSXBase.HTMLAttributes<HTMLMenuMobileElement>;
     }
   }
 }

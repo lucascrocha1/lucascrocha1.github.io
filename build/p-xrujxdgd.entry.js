@@ -1,0 +1,1 @@
+import{r,h as e}from"./p-a8bb2bce.js";const n=class{constructor(e){r(this,e)}render(){return e("div",null,e("menu-component",null))}};export{n as home_page};

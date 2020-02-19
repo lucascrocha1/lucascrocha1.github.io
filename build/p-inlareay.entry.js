@@ -1,0 +1,1 @@
+import{r,h as s}from"./p-a8bb2bce.js";const e=class{constructor(s){r(this,s)}render(){return s("div",null)}};export{e as menu_mobile};

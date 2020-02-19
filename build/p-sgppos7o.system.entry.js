@@ -1,0 +1,1 @@
+System.register(["./p-8d3a090a.system.js"],(function(n){"use strict";var t,e;return{setters:[function(n){t=n.r;e=n.h}],execute:function(){var r=n("home_page",function(){function n(n){t(this,n)}n.prototype.render=function(){return e("div",null,e("menu-component",null))};return n}())}}}));
