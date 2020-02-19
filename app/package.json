@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Stencil App Starter",
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build && node copy-build.js",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
@@ -14,5 +14,8 @@
     "@stencil/core": "^1.8.8",
     "@stencil/router": "^1.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ncp": "^2.0.0"
+  }
 }

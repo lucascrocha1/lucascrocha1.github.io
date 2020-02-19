@@ -508,3 +508,5 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/node,linux,windows,visualstudio,visualstudiocode
+
+/app/www/
