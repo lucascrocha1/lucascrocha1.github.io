@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AppRoot {}
+  interface HomePage {}
 }
 
 declare global {
@@ -21,16 +22,25 @@ declare global {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
   };
+
+  interface HTMLHomePageElement extends Components.HomePage, HTMLStencilElement {}
+  var HTMLHomePageElement: {
+    prototype: HTMLHomePageElement;
+    new (): HTMLHomePageElement;
+  };
   interface HTMLElementTagNameMap {
     'app-root': HTMLAppRootElement;
+    'home-page': HTMLHomePageElement;
   }
 }
 
 declare namespace LocalJSX {
   interface AppRoot {}
+  interface HomePage {}
 
   interface IntrinsicElements {
     'app-root': AppRoot;
+    'home-page': HomePage;
   }
 }
 
@@ -41,6 +51,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+      'home-page': LocalJSX.HomePage & JSXBase.HTMLAttributes<HTMLHomePageElement>;
     }
   }
 }
