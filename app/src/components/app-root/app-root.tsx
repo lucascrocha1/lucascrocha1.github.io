@@ -9,7 +9,7 @@ export class AppRoot {
 	render() {
 		return (
 			<main>
-				<stencil-router>
+				<stencil-router historyType="hash">
 					<stencil-route-switch scrollTopOffset={0}>
 						<stencil-route url='/' component='home-page' exact={true} />
 						<stencil-route url='/contact' component='contact-page' />
